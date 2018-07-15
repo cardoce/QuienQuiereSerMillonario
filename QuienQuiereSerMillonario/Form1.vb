@@ -17,28 +17,32 @@
     Dim numeroDePreguntas As Integer = 9
     Dim numeroDeTurno As Integer = 0
     Dim puntosDeJugador As Integer = 0
-    Dim indicePregunta As Integer = numeroDePregunta()
+    Dim indicePregunta As Integer = 0
+    Dim banderaJuegoContinua As Boolean = True
+
 
     Private Sub bttnResponder_Click(sender As Object, e As EventArgs) Handles bttnResponder.Click
-        indicePregunta = numeroDePregunta()
-        If numeroDeTurno < numeroDePreguntas Then
-            asignarPreguntasyRepuestas(indicePregunta)
-            preguntaUsada(indicePregunta)
-            numeroDeTurno = numeroDeTurno + 1
+        If numeroDeTurno < numeroDePreguntas And banderaJuegoContinua Then
             If respuestaCorrecta(respuestaSeleccionada, indicePregunta) Then
+                indicePregunta = indicePregunta + 1
                 puntosDeJugador = puntosDeJugador + 1
                 txtPuntos.Text = puntosDeJugador
+                asignarPreguntasyRepuestas(indicePregunta)
+                preguntaUsada(indicePregunta)
+                numeroDeTurno = numeroDeTurno + 1
             Else
                 MsgBox("Respuesta Incorrecta")
-                numeroDeTurno = 10
+                banderaJuegoContinua = False
+                bttnResponder.Enabled = False
             End If
         Else
             MsgBox("Fin del Juego")
+            bttnResponder.Enabled = False
         End If
     End Sub
 
     Function respuestaCorrecta(ByVal respuestaUsuario As String, ByVal indicePregunta As Integer) As Boolean
-        If respuestaUsuario.Equals(RespuestasCorrectas.GetValue(indicePregunta)) Then
+        If respuestaUsuario.Equals(RespuestasCorrectas(indicePregunta)) Then
             Return True
         Else
             Return False
@@ -63,14 +67,14 @@
         Return respuesta
     End Function
 
-    Function numeroDePregunta() As Integer
-        Dim numero As Integer
-        numero = CInt(Math.Ceiling(Rnd() * (numeroDePreguntas - 1)))
-        Do While (PreguntasUsadas(numero))
-            numero = CInt(Math.Ceiling(Rnd() * (numeroDePreguntas - 1)))
-        Loop
-        Return numero
-    End Function
+    'Function numeroDePregunta() As Integer
+    'Dim numero As Integer
+    'numero = CInt(Math.Ceiling(Rnd() * (numeroDePreguntas - 1)))
+    'Do While (PreguntasUsadas(numero))
+    '       numero = CInt(Math.Ceiling(Rnd() * (numeroDePreguntas - 1)))
+    'Loop
+    'Return numero
+    'End Function
 
     Sub preguntaUsada(ByVal index As Integer)
         PreguntasUsadas(index) = True
