@@ -25,8 +25,24 @@
 
 
     Private Sub bttnResponder_Click(sender As Object, e As EventArgs) Handles bttnResponder.Click
+        Dim respuesta As String = respuestaSeleccionada()
+        If MessageBox.Show(respuesta + " Respuesta definitiva?", "Respuesta Definitiva",
+                           MessageBoxButtons.OKCancel) =
+                           Windows.Forms.DialogResult.OK Then
+            procesarRespuesta(respuesta)
+        End If
+    End Sub
+
+    Function respuestaCorrecta(ByVal respuestaUsuario As String, ByVal indicePregunta As Integer) As Boolean
+        If respuestaUsuario.Equals(RespuestasCorrectas(indicePregunta)) Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
+    Sub procesarRespuesta(ByVal respuesta As String)
         If numeroDeTurno < numeroDePreguntas And banderaJuegoContinua Then
-            If respuestaCorrecta(respuestaSeleccionada, indicePregunta) Then
+            If respuestaCorrecta(respuesta, indicePregunta) Then
                 puntosDeJugador = Premios(indicePregunta)
                 indicePregunta = indicePregunta + 1
                 txtPuntos.Text = puntosDeJugador
@@ -44,15 +60,6 @@
             bttnResponder.Enabled = False
         End If
     End Sub
-
-    Function respuestaCorrecta(ByVal respuestaUsuario As String, ByVal indicePregunta As Integer) As Boolean
-        If respuestaUsuario.Equals(RespuestasCorrectas(indicePregunta)) Then
-            Return True
-        Else
-            Return False
-        End If
-
-    End Function
     Function respuestaSeleccionada() As String
         Dim respuesta As String = ""
         If rbttnA.Checked Then
