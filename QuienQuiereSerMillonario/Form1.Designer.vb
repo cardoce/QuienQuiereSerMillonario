@@ -26,7 +26,7 @@ Partial Class QuienQuiereSerMillonarioMain
         Me.bttnResponder = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtPuntos = New System.Windows.Forms.TextBox()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.bttn5050 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.rbttnD = New System.Windows.Forms.RadioButton()
         Me.rbttnC = New System.Windows.Forms.RadioButton()
@@ -57,7 +57,7 @@ Partial Class QuienQuiereSerMillonarioMain
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.txtPuntos)
-        Me.GroupBox1.Controls.Add(Me.Button2)
+        Me.GroupBox1.Controls.Add(Me.bttn5050)
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.rbttnD)
         Me.GroupBox1.Controls.Add(Me.bttnResponder)
@@ -81,15 +81,15 @@ Partial Class QuienQuiereSerMillonarioMain
         Me.txtPuntos.Size = New System.Drawing.Size(100, 20)
         Me.txtPuntos.TabIndex = 4
         '
-        'Button2
+        'bttn5050
         '
-        Me.Button2.AutoEllipsis = True
-        Me.Button2.Location = New System.Drawing.Point(28, 147)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 5
-        Me.Button2.Text = "50/50"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.bttn5050.AutoEllipsis = True
+        Me.bttn5050.Location = New System.Drawing.Point(28, 147)
+        Me.bttn5050.Name = "bttn5050"
+        Me.bttn5050.Size = New System.Drawing.Size(75, 23)
+        Me.bttn5050.TabIndex = 5
+        Me.bttn5050.Text = "50/50"
+        Me.bttn5050.UseVisualStyleBackColor = True
         '
         'Button1
         '
@@ -177,6 +177,6 @@ Partial Class QuienQuiereSerMillonarioMain
     Friend WithEvents rbttnA As RadioButton
     Friend WithEvents bttnJugar As Button
     Friend WithEvents txtPuntos As TextBox
-    Friend WithEvents Button2 As Button
+    Friend WithEvents bttn5050 As Button
     Friend WithEvents Button1 As Button
 End Class

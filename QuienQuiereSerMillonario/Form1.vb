@@ -123,5 +123,7 @@
         numeroDeTurno = numeroDeTurno + 1
     End Sub
 
-
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles bttn5050.Click
+        MsgBox("50/50")
+    End Sub
 End Class
