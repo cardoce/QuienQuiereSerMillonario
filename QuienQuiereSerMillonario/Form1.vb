@@ -14,6 +14,9 @@
         "Opcion D4", "Opcion A5", "Opcion B6", "Opcion B7", "Opcion D8", "Opcion C9"}
     Dim PreguntasUsadas() As Boolean = {False, False, False, False,
         False, False, False, False, False, False, False}
+    Dim Premios() As Integer = {100000, 250000, 500000, 750000, 1000000,
+        2000000, 2500000, 3000000, 5000000, 7500000, 10000000, 12000000,
+        15000000, 20000000, 25000000}
     Dim numeroDePreguntas As Integer = 9
     Dim numeroDeTurno As Integer = 0
     Dim puntosDeJugador As Integer = 0
@@ -24,8 +27,8 @@
     Private Sub bttnResponder_Click(sender As Object, e As EventArgs) Handles bttnResponder.Click
         If numeroDeTurno < numeroDePreguntas And banderaJuegoContinua Then
             If respuestaCorrecta(respuestaSeleccionada, indicePregunta) Then
+                puntosDeJugador = Premios(indicePregunta)
                 indicePregunta = indicePregunta + 1
-                puntosDeJugador = puntosDeJugador + 1
                 txtPuntos.Text = puntosDeJugador
                 asignarPreguntasyRepuestas(indicePregunta)
                 preguntaUsada(indicePregunta)
@@ -34,6 +37,7 @@
                 MsgBox("Respuesta Incorrecta")
                 banderaJuegoContinua = False
                 bttnResponder.Enabled = False
+                txtPuntos.Text = ultimaZona(numeroDeTurno)
             End If
         Else
             MsgBox("Fin del Juego")
@@ -80,6 +84,22 @@
         PreguntasUsadas(index) = True
     End Sub
 
+    Function ultimaZona(ByVal turno As Integer) As Integer
+        Dim zona As Integer = 0
+        If turno >= 15 Then
+            zona = Premios(24)
+        ElseIf turno >= 13 Then
+            zona = Premios(12)
+        ElseIf turno >= 10 Then
+            zona = Premios(9)
+        ElseIf turno >= 8 Then
+            zona = Premios(7)
+        ElseIf turno >= 5 Then
+            zona = Premios(4)
+        End If
+        Return zona
+    End Function
+
     Sub asignarPreguntasyRepuestas(ByVal index As Integer)
         Dim indexPreguntas As Integer = index * 4
         lblPregunta.Text = Preguntas(index)
@@ -95,4 +115,6 @@
         preguntaUsada(indicePregunta)
         numeroDeTurno = numeroDeTurno + 1
     End Sub
+
+
 End Class

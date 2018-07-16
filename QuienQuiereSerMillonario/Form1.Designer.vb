@@ -25,14 +25,14 @@ Partial Class QuienQuiereSerMillonarioMain
         Me.lblPregunta = New System.Windows.Forms.Label()
         Me.bttnResponder = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtPuntos = New System.Windows.Forms.TextBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.rbttnD = New System.Windows.Forms.RadioButton()
         Me.rbttnC = New System.Windows.Forms.RadioButton()
         Me.rbttnB = New System.Windows.Forms.RadioButton()
         Me.rbttnA = New System.Windows.Forms.RadioButton()
         Me.bttnJugar = New System.Windows.Forms.Button()
-        Me.txtPuntos = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -72,6 +72,33 @@ Partial Class QuienQuiereSerMillonarioMain
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Quien Quiere Ser Millonario"
         Me.GroupBox1.Visible = False
+        '
+        'txtPuntos
+        '
+        Me.txtPuntos.Location = New System.Drawing.Point(152, 190)
+        Me.txtPuntos.Name = "txtPuntos"
+        Me.txtPuntos.ReadOnly = True
+        Me.txtPuntos.Size = New System.Drawing.Size(100, 20)
+        Me.txtPuntos.TabIndex = 4
+        '
+        'Button2
+        '
+        Me.Button2.AutoEllipsis = True
+        Me.Button2.Location = New System.Drawing.Point(28, 147)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 5
+        Me.Button2.Text = "50/50"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(165, 147)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 4
+        Me.Button1.Text = "Publico"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'rbttnD
         '
@@ -125,32 +152,6 @@ Partial Class QuienQuiereSerMillonarioMain
         Me.bttnJugar.TabIndex = 3
         Me.bttnJugar.Text = "Empezar a Jugar"
         Me.bttnJugar.UseVisualStyleBackColor = True
-        '
-        'txtPuntos
-        '
-        Me.txtPuntos.Location = New System.Drawing.Point(152, 190)
-        Me.txtPuntos.Name = "txtPuntos"
-        Me.txtPuntos.Size = New System.Drawing.Size(100, 20)
-        Me.txtPuntos.TabIndex = 4
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(165, 147)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Publico"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.AutoEllipsis = True
-        Me.Button2.Location = New System.Drawing.Point(28, 147)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 5
-        Me.Button2.Text = "50/50"
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'QuienQuiereSerMillonarioMain
         '
