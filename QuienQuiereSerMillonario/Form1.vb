@@ -33,7 +33,7 @@
         End If
     End Sub
 
-    Function respuestaCorrecta(ByVal respuestaUsuario As String, ByVal indicePregunta As Integer) As Boolean
+    Function esRespuestaCorrecta(ByVal respuestaUsuario As String, ByVal indicePregunta As Integer) As Boolean
         If respuestaUsuario.Equals(RespuestasCorrectas(indicePregunta)) Then
             Return True
         Else
@@ -42,7 +42,7 @@
     End Function
     Sub procesarRespuesta(ByVal respuesta As String)
         If numeroDeTurno < numeroDePreguntas And banderaJuegoContinua Then
-            If respuestaCorrecta(respuesta, indicePregunta) Then
+            If esRespuestaCorrecta(respuesta, indicePregunta) Then
                 puntosDeJugador = Premios(indicePregunta)
                 indicePregunta = indicePregunta + 1
                 txtPuntos.Text = puntosDeJugador
@@ -59,6 +59,7 @@
             MsgBox("Fin del Juego")
             bttnResponder.Enabled = False
         End If
+        habilitarOpciones()
     End Sub
     Function respuestaSeleccionada() As String
         Dim respuesta As String = ""
@@ -123,5 +124,48 @@
         numeroDeTurno = numeroDeTurno + 1
     End Sub
 
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles bttn5050.Click
+        obtener5050(indicePregunta)
+        bttn5050.Enabled = False
+    End Sub
 
+    Sub obtener5050(ByVal index As Integer)
+        Dim respuesta As String = obtenerRespuestaCorrecta(index)
+        Dim banderaBreak As Integer = 0
+        If Not rbttnA.Text = respuesta And banderaBreak < 2 Then
+            rbttnA.Enabled = False
+            banderaBreak = banderaBreak + 1
+        End If
+        If Not rbttnB.Text = respuesta And banderaBreak < 2 Then
+            rbttnB.Enabled = False
+            banderaBreak = banderaBreak + 1
+        End If
+        If Not rbttnC.Text = respuesta And banderaBreak < 2 Then
+            rbttnC.Enabled = False
+            banderaBreak = banderaBreak + 1
+        End If
+        If Not rbttnD.Text = respuesta And banderaBreak < 2 Then
+            rbttnD.Enabled = False
+            banderaBreak = banderaBreak + 1
+        End If
+
+    End Sub
+
+    Function obtenerRespuestaCorrecta(ByVal index As Integer)
+        index = index * 4
+        Dim respuesta As String = ""
+        For value As Integer = 0 To 4
+            If esRespuestaCorrecta(Respuestas(index), index) Then
+                respuesta = Respuestas(index)
+            End If
+        Next
+        Return respuesta
+    End Function
+
+    Sub habilitarOpciones()
+        rbttnA.Enabled = True
+        rbttnB.Enabled = True
+        rbttnC.Enabled = True
+        rbttnD.Enabled = True
+    End Sub
 End Class
