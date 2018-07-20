@@ -22,6 +22,7 @@ Partial Class QuienQuiereSerMillonarioMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.lblPregunta = New System.Windows.Forms.Label()
         Me.bttnResponder = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -33,6 +34,8 @@ Partial Class QuienQuiereSerMillonarioMain
         Me.rbttnB = New System.Windows.Forms.RadioButton()
         Me.rbttnA = New System.Windows.Forms.RadioButton()
         Me.bttnJugar = New System.Windows.Forms.Button()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -153,11 +156,23 @@ Partial Class QuienQuiereSerMillonarioMain
         Me.bttnJugar.Text = "Empezar a Jugar"
         Me.bttnJugar.UseVisualStyleBackColor = True
         '
+        'Timer1
+        '
+        '
+        'Timer
+        '
+        Me.Timer.AutoSize = True
+        Me.Timer.Location = New System.Drawing.Point(379, 26)
+        Me.Timer.Name = "Timer"
+        Me.Timer.Size = New System.Drawing.Size(0, 13)
+        Me.Timer.TabIndex = 4
+        '
         'QuienQuiereSerMillonarioMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(487, 342)
+        Me.Controls.Add(Me.Timer)
         Me.Controls.Add(Me.bttnJugar)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "QuienQuiereSerMillonarioMain"
@@ -165,6 +180,7 @@ Partial Class QuienQuiereSerMillonarioMain
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -179,4 +195,6 @@ Partial Class QuienQuiereSerMillonarioMain
     Friend WithEvents txtPuntos As TextBox
     Friend WithEvents bttn5050 As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents Timer As Label
 End Class
