@@ -180,9 +180,9 @@
         Else
 
             Timer1.Stop()
-            Timer.Text = "El Tiempo ha terminado!"
             MessageBox.Show("No has contestado a tiempo.", "Lo Sentimos!")
-            Terminarjuego()
+            bttnResponder.Enabled = False
+
         End If
     End Sub
 
