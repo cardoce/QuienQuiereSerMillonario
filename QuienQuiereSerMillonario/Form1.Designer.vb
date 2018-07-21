@@ -22,6 +22,7 @@ Partial Class QuienQuiereSerMillonarioMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.lblPregunta = New System.Windows.Forms.Label()
         Me.bttnResponder = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -33,7 +34,15 @@ Partial Class QuienQuiereSerMillonarioMain
         Me.rbttnB = New System.Windows.Forms.RadioButton()
         Me.rbttnA = New System.Windows.Forms.RadioButton()
         Me.bttnJugar = New System.Windows.Forms.Button()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer = New System.Windows.Forms.Label()
+        Me.ButtonSalir = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblPregunta
@@ -65,9 +74,9 @@ Partial Class QuienQuiereSerMillonarioMain
         Me.GroupBox1.Controls.Add(Me.lblPregunta)
         Me.GroupBox1.Controls.Add(Me.rbttnB)
         Me.GroupBox1.Controls.Add(Me.rbttnA)
-        Me.GroupBox1.Location = New System.Drawing.Point(40, 60)
+        Me.GroupBox1.Location = New System.Drawing.Point(41, 260)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(406, 228)
+        Me.GroupBox1.Size = New System.Drawing.Size(406, 176)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Quien Quiere Ser Millonario"
@@ -146,25 +155,81 @@ Partial Class QuienQuiereSerMillonarioMain
         '
         'bttnJugar
         '
-        Me.bttnJugar.Location = New System.Drawing.Point(172, 21)
+        Me.bttnJugar.Location = New System.Drawing.Point(165, 213)
         Me.bttnJugar.Name = "bttnJugar"
-        Me.bttnJugar.Size = New System.Drawing.Size(155, 23)
+        Me.bttnJugar.Size = New System.Drawing.Size(75, 23)
         Me.bttnJugar.TabIndex = 3
-        Me.bttnJugar.Text = "Empezar a Jugar"
+        Me.bttnJugar.Text = "Jugar"
         Me.bttnJugar.UseVisualStyleBackColor = True
+        '
+        'Timer1
+        '
+        Me.Timer1.Interval = 1000
+        '
+        'Timer
+        '
+        Me.Timer.AutoSize = True
+        Me.Timer.Location = New System.Drawing.Point(379, 26)
+        Me.Timer.Name = "Timer"
+        Me.Timer.Size = New System.Drawing.Size(0, 13)
+        Me.Timer.TabIndex = 4
+        '
+        'ButtonSalir
+        '
+        Me.ButtonSalir.Location = New System.Drawing.Point(246, 213)
+        Me.ButtonSalir.Name = "ButtonSalir"
+        Me.ButtonSalir.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonSalir.TabIndex = 5
+        Me.ButtonSalir.Text = "Salir"
+        Me.ButtonSalir.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(76, 213)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(83, 23)
+        Me.Button2.TabIndex = 6
+        Me.Button2.Text = "Instrucciones"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.PictureBox1)
+        Me.GroupBox2.Controls.Add(Me.Button2)
+        Me.GroupBox2.Controls.Add(Me.ButtonSalir)
+        Me.GroupBox2.Controls.Add(Me.bttnJugar)
+        Me.GroupBox2.Location = New System.Drawing.Point(41, 12)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(406, 242)
+        Me.GroupBox2.TabIndex = 7
+        Me.GroupBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.QuienQuiereSerMillonario.My.Resources.Resources.images1
+        Me.PictureBox1.InitialImage = Nothing
+        Me.PictureBox1.Location = New System.Drawing.Point(104, 19)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(182, 179)
+        Me.PictureBox1.TabIndex = 7
+        Me.PictureBox1.TabStop = False
         '
         'QuienQuiereSerMillonarioMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(487, 342)
-        Me.Controls.Add(Me.bttnJugar)
+        Me.ClientSize = New System.Drawing.Size(487, 457)
+        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.Timer)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "QuienQuiereSerMillonarioMain"
         Me.Text = "Quien Quiere Ser Millonario?"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -179,4 +244,10 @@ Partial Class QuienQuiereSerMillonarioMain
     Friend WithEvents txtPuntos As TextBox
     Friend WithEvents bttn5050 As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents Timer As Label
+    Friend WithEvents ButtonSalir As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

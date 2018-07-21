@@ -22,10 +22,11 @@
     Dim puntosDeJugador As Integer = 0
     Dim indicePregunta As Integer = 0
     Dim banderaJuegoContinua As Boolean = True
-
+    Dim timeLeft As Integer = 30
 
     Private Sub bttnResponder_Click(sender As Object, e As EventArgs) Handles bttnResponder.Click
         Dim respuesta As String = respuestaSeleccionada()
+        correrTimer()
         If MessageBox.Show(respuesta + " Respuesta definitiva?", "Respuesta Definitiva",
                            MessageBoxButtons.OKCancel) =
                            Windows.Forms.DialogResult.OK Then
@@ -122,6 +123,7 @@
         asignarPreguntasyRepuestas(indicePregunta)
         preguntaUsada(indicePregunta)
         numeroDeTurno = numeroDeTurno + 1
+        correrTimer()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles bttn5050.Click
@@ -168,4 +170,32 @@
         rbttnC.Enabled = True
         rbttnD.Enabled = True
     End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+
+        If timeLeft > 0 Then
+
+            timeLeft -= 1
+            Timer.Text = timeLeft & " seconds"
+        Else
+
+            Timer1.Stop()
+            Timer.Text = "El Tiempo ha terminado!"
+            MessageBox.Show("No has contestado a tiempo.", "Lo Sentimos!")
+            Terminarjuego()
+        End If
+    End Sub
+
+    Sub correrTimer()
+        Timer1.Enabled = True
+    End Sub
+
+    Private Sub ButtonSalir_Click(sender As Object, e As EventArgs) Handles ButtonSalir.Click
+        Terminarjuego()
+    End Sub
+
+    Sub Terminarjuego()
+        End
+    End Sub
+
 End Class
