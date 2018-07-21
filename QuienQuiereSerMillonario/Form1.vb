@@ -22,7 +22,7 @@
     Dim puntosDeJugador As Integer = 0
     Dim indicePregunta As Integer = 0
     Dim banderaJuegoContinua As Boolean = True
-
+    Dim timeLeft As Integer = 30
 
     Private Sub bttnResponder_Click(sender As Object, e As EventArgs) Handles bttnResponder.Click
         Dim respuesta As String = respuestaSeleccionada()
@@ -172,7 +172,7 @@
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        Dim timeLeft As Integer = 30
+
         If timeLeft > 0 Then
 
             timeLeft -= 1
@@ -182,12 +182,20 @@
             Timer1.Stop()
             Timer.Text = "El Tiempo ha terminado!"
             MessageBox.Show("No has contestado a tiempo.", "Lo Sentimos!")
-
+            Terminarjuego()
         End If
     End Sub
 
     Sub correrTimer()
         Timer1.Enabled = True
+    End Sub
+
+    Private Sub ButtonSalir_Click(sender As Object, e As EventArgs) Handles ButtonSalir.Click
+        Terminarjuego()
+    End Sub
+
+    Sub Terminarjuego()
+        End
     End Sub
 
 End Class
