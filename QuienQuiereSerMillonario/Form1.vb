@@ -61,6 +61,7 @@
             bttnResponder.Enabled = False
         End If
         habilitarOpciones()
+        deshabilitarPorcentajes()
     End Sub
     Function respuestaSeleccionada() As String
         Dim respuesta As String = ""
@@ -198,4 +199,39 @@
         End
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles bttnPublico.Click
+        calcularPorcentajes()
+        bttnPublico.Enabled = False
+    End Sub
+
+    Sub deshabilitarPorcentajes()
+        txtPorA.Hide()
+        txtPorB.Hide()
+        txtPorC.Hide()
+        txtPorD.Hide()
+    End Sub
+
+    Sub calcularPorcentajes()
+        Dim range As New Random
+        Dim porA, porB, porC, porD As Integer
+        Dim max As Integer = 100
+        porA = range.Next(0, max)
+        max -= porA
+        porB = range.Next(0, max)
+        max -= porB
+        porC = range.Next(0, max)
+        max -= porC
+        porD = max
+
+        txtPorA.Text = porA
+        txtPorB.Text = porB
+        txtPorC.Text = porC
+        txtPorD.Text = porD
+
+        txtPorA.Show()
+        txtPorB.Show()
+        txtPorC.Show()
+        txtPorD.Show()
+
+    End Sub
 End Class
