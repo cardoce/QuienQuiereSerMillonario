@@ -28,7 +28,7 @@ Partial Class QuienQuiereSerMillonarioMain
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtPuntos = New System.Windows.Forms.TextBox()
         Me.bttn5050 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.bttnPublico = New System.Windows.Forms.Button()
         Me.rbttnD = New System.Windows.Forms.RadioButton()
         Me.rbttnC = New System.Windows.Forms.RadioButton()
         Me.rbttnB = New System.Windows.Forms.RadioButton()
@@ -40,6 +40,10 @@ Partial Class QuienQuiereSerMillonarioMain
         Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.txtPorA = New System.Windows.Forms.TextBox()
+        Me.txtPorC = New System.Windows.Forms.TextBox()
+        Me.txtPorB = New System.Windows.Forms.TextBox()
+        Me.txtPorD = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -65,9 +69,13 @@ Partial Class QuienQuiereSerMillonarioMain
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.txtPorD)
+        Me.GroupBox1.Controls.Add(Me.txtPorB)
+        Me.GroupBox1.Controls.Add(Me.txtPorC)
+        Me.GroupBox1.Controls.Add(Me.txtPorA)
         Me.GroupBox1.Controls.Add(Me.txtPuntos)
         Me.GroupBox1.Controls.Add(Me.bttn5050)
-        Me.GroupBox1.Controls.Add(Me.Button1)
+        Me.GroupBox1.Controls.Add(Me.bttnPublico)
         Me.GroupBox1.Controls.Add(Me.rbttnD)
         Me.GroupBox1.Controls.Add(Me.bttnResponder)
         Me.GroupBox1.Controls.Add(Me.rbttnC)
@@ -100,14 +108,14 @@ Partial Class QuienQuiereSerMillonarioMain
         Me.bttn5050.Text = "50/50"
         Me.bttn5050.UseVisualStyleBackColor = True
         '
-        'Button1
+        'bttnPublico
         '
-        Me.Button1.Location = New System.Drawing.Point(165, 147)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Publico"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.bttnPublico.Location = New System.Drawing.Point(165, 147)
+        Me.bttnPublico.Name = "bttnPublico"
+        Me.bttnPublico.Size = New System.Drawing.Size(75, 23)
+        Me.bttnPublico.TabIndex = 4
+        Me.bttnPublico.Text = "Publico"
+        Me.bttnPublico.UseVisualStyleBackColor = True
         '
         'rbttnD
         '
@@ -214,6 +222,42 @@ Partial Class QuienQuiereSerMillonarioMain
         Me.PictureBox1.TabIndex = 7
         Me.PictureBox1.TabStop = False
         '
+        'txtPorA
+        '
+        Me.txtPorA.Location = New System.Drawing.Point(110, 63)
+        Me.txtPorA.Name = "txtPorA"
+        Me.txtPorA.ReadOnly = True
+        Me.txtPorA.Size = New System.Drawing.Size(34, 20)
+        Me.txtPorA.TabIndex = 6
+        Me.txtPorA.Visible = False
+        '
+        'txtPorC
+        '
+        Me.txtPorC.Location = New System.Drawing.Point(110, 102)
+        Me.txtPorC.Name = "txtPorC"
+        Me.txtPorC.ReadOnly = True
+        Me.txtPorC.Size = New System.Drawing.Size(34, 20)
+        Me.txtPorC.TabIndex = 7
+        Me.txtPorC.Visible = False
+        '
+        'txtPorB
+        '
+        Me.txtPorB.Location = New System.Drawing.Point(282, 62)
+        Me.txtPorB.Name = "txtPorB"
+        Me.txtPorB.ReadOnly = True
+        Me.txtPorB.Size = New System.Drawing.Size(34, 20)
+        Me.txtPorB.TabIndex = 8
+        Me.txtPorB.Visible = False
+        '
+        'txtPorD
+        '
+        Me.txtPorD.Location = New System.Drawing.Point(282, 105)
+        Me.txtPorD.Name = "txtPorD"
+        Me.txtPorD.ReadOnly = True
+        Me.txtPorD.Size = New System.Drawing.Size(34, 20)
+        Me.txtPorD.TabIndex = 9
+        Me.txtPorD.Visible = False
+        '
         'QuienQuiereSerMillonarioMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -243,11 +287,15 @@ Partial Class QuienQuiereSerMillonarioMain
     Friend WithEvents bttnJugar As Button
     Friend WithEvents txtPuntos As TextBox
     Friend WithEvents bttn5050 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents bttnPublico As Button
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Timer As Label
     Friend WithEvents ButtonSalir As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents txtPorD As TextBox
+    Friend WithEvents txtPorB As TextBox
+    Friend WithEvents txtPorC As TextBox
+    Friend WithEvents txtPorA As TextBox
 End Class
