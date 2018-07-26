@@ -26,7 +26,7 @@
 
     Private Sub bttnResponder_Click(sender As Object, e As EventArgs) Handles bttnResponder.Click
         Dim respuesta As String = respuestaSeleccionada()
-        correrTimer()
+
         If MessageBox.Show(respuesta + " Respuesta definitiva?", "Respuesta Definitiva",
                            MessageBoxButtons.OKCancel) =
                            Windows.Forms.DialogResult.OK Then
@@ -52,6 +52,7 @@
                 numeroDeTurno = numeroDeTurno + 1
             Else
                 MsgBox("Respuesta Incorrecta")
+                Timer1.Stop()
                 banderaJuegoContinua = False
                 bttnResponder.Enabled = False
                 txtPuntos.Text = ultimaZona(numeroDeTurno)
@@ -130,6 +131,7 @@
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles bttn5050.Click
         obtener5050(indicePregunta)
         bttn5050.Enabled = False
+        timeLeft = 30
     End Sub
 
     Sub obtener5050(ByVal index As Integer)
@@ -177,7 +179,7 @@
         If timeLeft > 0 Then
 
             timeLeft -= 1
-            Timer.Text = timeLeft & " seconds"
+            LabelTimer.Text = timeLeft & " seconds"
         Else
 
             Timer1.Stop()
@@ -202,6 +204,7 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles bttnPublico.Click
         calcularPorcentajes()
         bttnPublico.Enabled = False
+        timeLeft = 30
     End Sub
 
     Sub deshabilitarPorcentajes()
@@ -234,4 +237,14 @@
         txtPorD.Show()
 
     End Sub
+
+    Private Sub QuienQuiereSerMillonarioMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        MostrarFechaHora()
+    End Sub
+
+    Sub mostrarFechaHora()
+        LabelDate.Text = DateTime.Now.ToString("dd/MM/yyyy")
+        LabelTime.Text = DateTime.Now.ToShortTimeString()
+    End Sub
+
 End Class
