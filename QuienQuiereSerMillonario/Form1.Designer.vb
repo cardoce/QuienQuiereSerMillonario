@@ -26,6 +26,10 @@ Partial Class QuienQuiereSerMillonarioMain
         Me.lblPregunta = New System.Windows.Forms.Label()
         Me.bttnResponder = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtPorD = New System.Windows.Forms.TextBox()
+        Me.txtPorB = New System.Windows.Forms.TextBox()
+        Me.txtPorC = New System.Windows.Forms.TextBox()
+        Me.txtPorA = New System.Windows.Forms.TextBox()
         Me.txtPuntos = New System.Windows.Forms.TextBox()
         Me.bttn5050 = New System.Windows.Forms.Button()
         Me.bttnPublico = New System.Windows.Forms.Button()
@@ -40,10 +44,10 @@ Partial Class QuienQuiereSerMillonarioMain
         Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.txtPorA = New System.Windows.Forms.TextBox()
-        Me.txtPorC = New System.Windows.Forms.TextBox()
-        Me.txtPorB = New System.Windows.Forms.TextBox()
-        Me.txtPorD = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.LabelTimer = New System.Windows.Forms.Label()
+        Me.LabelDate = New System.Windows.Forms.Label()
+        Me.LabelTime = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -69,6 +73,8 @@ Partial Class QuienQuiereSerMillonarioMain
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.LabelTimer)
+        Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.txtPorD)
         Me.GroupBox1.Controls.Add(Me.txtPorB)
         Me.GroupBox1.Controls.Add(Me.txtPorC)
@@ -89,6 +95,42 @@ Partial Class QuienQuiereSerMillonarioMain
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Quien Quiere Ser Millonario"
         Me.GroupBox1.Visible = False
+        '
+        'txtPorD
+        '
+        Me.txtPorD.Location = New System.Drawing.Point(282, 105)
+        Me.txtPorD.Name = "txtPorD"
+        Me.txtPorD.ReadOnly = True
+        Me.txtPorD.Size = New System.Drawing.Size(34, 20)
+        Me.txtPorD.TabIndex = 9
+        Me.txtPorD.Visible = False
+        '
+        'txtPorB
+        '
+        Me.txtPorB.Location = New System.Drawing.Point(282, 62)
+        Me.txtPorB.Name = "txtPorB"
+        Me.txtPorB.ReadOnly = True
+        Me.txtPorB.Size = New System.Drawing.Size(34, 20)
+        Me.txtPorB.TabIndex = 8
+        Me.txtPorB.Visible = False
+        '
+        'txtPorC
+        '
+        Me.txtPorC.Location = New System.Drawing.Point(110, 102)
+        Me.txtPorC.Name = "txtPorC"
+        Me.txtPorC.ReadOnly = True
+        Me.txtPorC.Size = New System.Drawing.Size(34, 20)
+        Me.txtPorC.TabIndex = 7
+        Me.txtPorC.Visible = False
+        '
+        'txtPorA
+        '
+        Me.txtPorA.Location = New System.Drawing.Point(110, 63)
+        Me.txtPorA.Name = "txtPorA"
+        Me.txtPorA.ReadOnly = True
+        Me.txtPorA.Size = New System.Drawing.Size(34, 20)
+        Me.txtPorA.TabIndex = 6
+        Me.txtPorA.Visible = False
         '
         'txtPuntos
         '
@@ -202,6 +244,8 @@ Partial Class QuienQuiereSerMillonarioMain
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.LabelTime)
+        Me.GroupBox2.Controls.Add(Me.LabelDate)
         Me.GroupBox2.Controls.Add(Me.PictureBox1)
         Me.GroupBox2.Controls.Add(Me.Button2)
         Me.GroupBox2.Controls.Add(Me.ButtonSalir)
@@ -222,41 +266,41 @@ Partial Class QuienQuiereSerMillonarioMain
         Me.PictureBox1.TabIndex = 7
         Me.PictureBox1.TabStop = False
         '
-        'txtPorA
+        'Label1
         '
-        Me.txtPorA.Location = New System.Drawing.Point(110, 63)
-        Me.txtPorA.Name = "txtPorA"
-        Me.txtPorA.ReadOnly = True
-        Me.txtPorA.Size = New System.Drawing.Size(34, 20)
-        Me.txtPorA.TabIndex = 6
-        Me.txtPorA.Visible = False
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(230, 26)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(91, 13)
+        Me.Label1.TabIndex = 10
+        Me.Label1.Text = "Tiempo Restante:"
         '
-        'txtPorC
+        'LabelTimer
         '
-        Me.txtPorC.Location = New System.Drawing.Point(110, 102)
-        Me.txtPorC.Name = "txtPorC"
-        Me.txtPorC.ReadOnly = True
-        Me.txtPorC.Size = New System.Drawing.Size(34, 20)
-        Me.txtPorC.TabIndex = 7
-        Me.txtPorC.Visible = False
+        Me.LabelTimer.AutoSize = True
+        Me.LabelTimer.Location = New System.Drawing.Point(327, 26)
+        Me.LabelTimer.Name = "LabelTimer"
+        Me.LabelTimer.Size = New System.Drawing.Size(68, 13)
+        Me.LabelTimer.TabIndex = 11
+        Me.LabelTimer.Text = "30 segundos"
         '
-        'txtPorB
+        'LabelDate
         '
-        Me.txtPorB.Location = New System.Drawing.Point(282, 62)
-        Me.txtPorB.Name = "txtPorB"
-        Me.txtPorB.ReadOnly = True
-        Me.txtPorB.Size = New System.Drawing.Size(34, 20)
-        Me.txtPorB.TabIndex = 8
-        Me.txtPorB.Visible = False
+        Me.LabelDate.AutoSize = True
+        Me.LabelDate.Location = New System.Drawing.Point(13, 19)
+        Me.LabelDate.Name = "LabelDate"
+        Me.LabelDate.Size = New System.Drawing.Size(37, 13)
+        Me.LabelDate.TabIndex = 8
+        Me.LabelDate.Text = "Fecha"
         '
-        'txtPorD
+        'LabelTime
         '
-        Me.txtPorD.Location = New System.Drawing.Point(282, 105)
-        Me.txtPorD.Name = "txtPorD"
-        Me.txtPorD.ReadOnly = True
-        Me.txtPorD.Size = New System.Drawing.Size(34, 20)
-        Me.txtPorD.TabIndex = 9
-        Me.txtPorD.Visible = False
+        Me.LabelTime.AutoSize = True
+        Me.LabelTime.Location = New System.Drawing.Point(342, 18)
+        Me.LabelTime.Name = "LabelTime"
+        Me.LabelTime.Size = New System.Drawing.Size(30, 13)
+        Me.LabelTime.TabIndex = 9
+        Me.LabelTime.Text = "Hora"
         '
         'QuienQuiereSerMillonarioMain
         '
@@ -271,6 +315,7 @@ Partial Class QuienQuiereSerMillonarioMain
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -298,4 +343,8 @@ Partial Class QuienQuiereSerMillonarioMain
     Friend WithEvents txtPorB As TextBox
     Friend WithEvents txtPorC As TextBox
     Friend WithEvents txtPorA As TextBox
+    Friend WithEvents LabelTimer As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents LabelTime As Label
+    Friend WithEvents LabelDate As Label
 End Class
