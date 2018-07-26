@@ -1,17 +1,40 @@
 ﻿Public Class QuienQuiereSerMillonarioMain
-    Dim Preguntas() As String = {"Pregunta1", "Pregunta2", "Pregunta3", "Pregunta4",
-        "Pregunta5", "Pregunta6", "Pregunta7", "Pregunta8", "Pregunta9"}
-    Dim Respuestas() As String = {"Opcion A1", "Opcion B1", "Opcion C1", "Opcion D1",
-        "Opcion A2", "Opcion B2", "Opcion C2", "Opcion D2",
-        "Opcion A3", "Opcion B3", "Opcion C3", "Opcion D3",
-        "Opcion A4", "Opcion B4", "Opcion C4", "Opcion D4",
-        "Opcion A5", "Opcion B5", "Opcion C5", "Opcion D5",
-        "Opcion A6", "Opcion B6", "Opcion C6", "Opcion D6",
-        "Opcion A7", "Opcion B7", "Opcion C7", "Opcion D7",
-        "Opcion A8", "Opcion B8", "Opcion C8", "Opcion D8",
-        "Opcion A9", "Opcion B9", "Opcion C9", "Opcion D9"}
-    Dim RespuestasCorrectas() As String = {"Opcion A1", "Opcion C2", "Opcion B3",
-        "Opcion D4", "Opcion A5", "Opcion B6", "Opcion B7", "Opcion D8", "Opcion C9"}
+    Dim Preguntas() As String = {
+        "Quien dirigió la película El Padrino en 1972?", "Tecnica que describe y representa detalladamente la superficie de un terreno",
+        "Uno de los libros de J. K. Rowling es Harry Potter y", "Con que material esculpió Miguel Angel La Piedad ubicada en el Vaticano?",
+        "Cual es el idioma oficial de Israel?", "Cual de los siguientes países limita con Francia?",
+         "En la mitología griega, Eros es considerado el dios del:",
+         "Las Vegas es una ciudad estadounidense que queda en:", "Cual de estos animales es un rumiante?",
+         "Que parte del cuerpo se examina en una encefalografia?",
+         "Que elemento químico es representado por el símbolo P?",
+        "Tim Burton dirigió la película",
+        "Es el nombre de uno de los Tres Reyes Magos:",
+        "Cual de estos bailes es tradicional de España?",
+        "El Tour de Francia es una famosa competencia de:"}
+    Dim Respuestas() As String = {
+        "Roman Polanski", "Franco Zeffirelli", "Francis Ford Copolla", "Federico Fellini",
+         "Topografía", "Serigrafía", "Epigrafía", "Holografía",
+        "El arca perdida", "El prisionero de Azkaban", "La magia negra", "Su varita",
+         "Bronce", "Marmol", "Madera", "Yeso",
+         "Japones", "Griego", "Hebreo", "Chino",
+         "Holanda", "Suecia", "Dinamarca", "Belgica",
+         "Odio", "Miedo", "Amor", "Trabajo",
+         "Oklahoma", "Nevada", "Arizona", "Colorado",
+         "La ardilla", "El caracol", "El loro", "La vaca",
+         "Ovarios", "Cráneo", "Pulmones", "Hígado",
+         "Bromo", "Boro", "Rubidio", "Fosforo",
+         "Inteligencia Artificial", "El gran pez", "Hombres de Negro", "Juegos Macabros",
+         "Barrabas", "Jonas", "Melchor", "Judas",
+        "Samba", "Fandango", "Joropo", "Cumbia",
+        "Golf", "Ciclismo", "Fútbol", "Automovilismo"
+    }
+    Dim RespuestasCorrectas() As String = {
+        "Francis Ford Copolla", "Topografía", "El prisionero de Azkaban", "Marmol",
+        "Hebreo", "Belgica", "Amor", "Nevada", "La vaca", "Cráneo", "Fosforo", "El gran pez",
+        "Melchor", "Fandango", "Ciclismo"
+    }
+
+
     Dim PreguntasUsadas() As Boolean = {False, False, False, False,
         False, False, False, False, False, False, False}
     Dim Premios() As Integer = {100000, 250000, 500000, 750000, 1000000,

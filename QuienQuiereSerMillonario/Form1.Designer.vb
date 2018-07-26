@@ -26,6 +26,8 @@ Partial Class QuienQuiereSerMillonarioMain
         Me.lblPregunta = New System.Windows.Forms.Label()
         Me.bttnResponder = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.LabelTimer = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.txtPorD = New System.Windows.Forms.TextBox()
         Me.txtPorB = New System.Windows.Forms.TextBox()
         Me.txtPorC = New System.Windows.Forms.TextBox()
@@ -43,11 +45,9 @@ Partial Class QuienQuiereSerMillonarioMain
         Me.ButtonSalir = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.LabelTimer = New System.Windows.Forms.Label()
-        Me.LabelDate = New System.Windows.Forms.Label()
         Me.LabelTime = New System.Windows.Forms.Label()
+        Me.LabelDate = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -56,7 +56,7 @@ Partial Class QuienQuiereSerMillonarioMain
         'lblPregunta
         '
         Me.lblPregunta.AutoSize = True
-        Me.lblPregunta.Location = New System.Drawing.Point(10, 26)
+        Me.lblPregunta.Location = New System.Drawing.Point(13, 56)
         Me.lblPregunta.Name = "lblPregunta"
         Me.lblPregunta.Size = New System.Drawing.Size(50, 13)
         Me.lblPregunta.TabIndex = 0
@@ -64,7 +64,7 @@ Partial Class QuienQuiereSerMillonarioMain
         '
         'bttnResponder
         '
-        Me.bttnResponder.Location = New System.Drawing.Point(303, 147)
+        Me.bttnResponder.Location = New System.Drawing.Point(306, 178)
         Me.bttnResponder.Name = "bttnResponder"
         Me.bttnResponder.Size = New System.Drawing.Size(75, 23)
         Me.bttnResponder.TabIndex = 1
@@ -90,15 +90,33 @@ Partial Class QuienQuiereSerMillonarioMain
         Me.GroupBox1.Controls.Add(Me.rbttnA)
         Me.GroupBox1.Location = New System.Drawing.Point(41, 260)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(406, 176)
+        Me.GroupBox1.Size = New System.Drawing.Size(406, 253)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Quien Quiere Ser Millonario"
         Me.GroupBox1.Visible = False
         '
+        'LabelTimer
+        '
+        Me.LabelTimer.AutoSize = True
+        Me.LabelTimer.Location = New System.Drawing.Point(327, 26)
+        Me.LabelTimer.Name = "LabelTimer"
+        Me.LabelTimer.Size = New System.Drawing.Size(68, 13)
+        Me.LabelTimer.TabIndex = 11
+        Me.LabelTimer.Text = "30 segundos"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(230, 26)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(91, 13)
+        Me.Label1.TabIndex = 10
+        Me.Label1.Text = "Tiempo Restante:"
+        '
         'txtPorD
         '
-        Me.txtPorD.Location = New System.Drawing.Point(282, 105)
+        Me.txtPorD.Location = New System.Drawing.Point(285, 136)
         Me.txtPorD.Name = "txtPorD"
         Me.txtPorD.ReadOnly = True
         Me.txtPorD.Size = New System.Drawing.Size(34, 20)
@@ -107,7 +125,7 @@ Partial Class QuienQuiereSerMillonarioMain
         '
         'txtPorB
         '
-        Me.txtPorB.Location = New System.Drawing.Point(282, 62)
+        Me.txtPorB.Location = New System.Drawing.Point(285, 93)
         Me.txtPorB.Name = "txtPorB"
         Me.txtPorB.ReadOnly = True
         Me.txtPorB.Size = New System.Drawing.Size(34, 20)
@@ -116,7 +134,7 @@ Partial Class QuienQuiereSerMillonarioMain
         '
         'txtPorC
         '
-        Me.txtPorC.Location = New System.Drawing.Point(110, 102)
+        Me.txtPorC.Location = New System.Drawing.Point(113, 133)
         Me.txtPorC.Name = "txtPorC"
         Me.txtPorC.ReadOnly = True
         Me.txtPorC.Size = New System.Drawing.Size(34, 20)
@@ -125,7 +143,7 @@ Partial Class QuienQuiereSerMillonarioMain
         '
         'txtPorA
         '
-        Me.txtPorA.Location = New System.Drawing.Point(110, 63)
+        Me.txtPorA.Location = New System.Drawing.Point(113, 94)
         Me.txtPorA.Name = "txtPorA"
         Me.txtPorA.ReadOnly = True
         Me.txtPorA.Size = New System.Drawing.Size(34, 20)
@@ -134,7 +152,7 @@ Partial Class QuienQuiereSerMillonarioMain
         '
         'txtPuntos
         '
-        Me.txtPuntos.Location = New System.Drawing.Point(152, 190)
+        Me.txtPuntos.Location = New System.Drawing.Point(154, 216)
         Me.txtPuntos.Name = "txtPuntos"
         Me.txtPuntos.ReadOnly = True
         Me.txtPuntos.Size = New System.Drawing.Size(100, 20)
@@ -143,7 +161,7 @@ Partial Class QuienQuiereSerMillonarioMain
         'bttn5050
         '
         Me.bttn5050.AutoEllipsis = True
-        Me.bttn5050.Location = New System.Drawing.Point(28, 147)
+        Me.bttn5050.Location = New System.Drawing.Point(31, 178)
         Me.bttn5050.Name = "bttn5050"
         Me.bttn5050.Size = New System.Drawing.Size(75, 23)
         Me.bttn5050.TabIndex = 5
@@ -152,7 +170,7 @@ Partial Class QuienQuiereSerMillonarioMain
         '
         'bttnPublico
         '
-        Me.bttnPublico.Location = New System.Drawing.Point(165, 147)
+        Me.bttnPublico.Location = New System.Drawing.Point(168, 178)
         Me.bttnPublico.Name = "bttnPublico"
         Me.bttnPublico.Size = New System.Drawing.Size(75, 23)
         Me.bttnPublico.TabIndex = 4
@@ -162,7 +180,7 @@ Partial Class QuienQuiereSerMillonarioMain
         'rbttnD
         '
         Me.rbttnD.AutoSize = True
-        Me.rbttnD.Location = New System.Drawing.Point(186, 105)
+        Me.rbttnD.Location = New System.Drawing.Point(189, 136)
         Me.rbttnD.Name = "rbttnD"
         Me.rbttnD.Size = New System.Drawing.Size(90, 17)
         Me.rbttnD.TabIndex = 3
@@ -173,7 +191,7 @@ Partial Class QuienQuiereSerMillonarioMain
         'rbttnC
         '
         Me.rbttnC.AutoSize = True
-        Me.rbttnC.Location = New System.Drawing.Point(13, 105)
+        Me.rbttnC.Location = New System.Drawing.Point(16, 136)
         Me.rbttnC.Name = "rbttnC"
         Me.rbttnC.Size = New System.Drawing.Size(90, 17)
         Me.rbttnC.TabIndex = 2
@@ -184,7 +202,7 @@ Partial Class QuienQuiereSerMillonarioMain
         'rbttnB
         '
         Me.rbttnB.AutoSize = True
-        Me.rbttnB.Location = New System.Drawing.Point(186, 63)
+        Me.rbttnB.Location = New System.Drawing.Point(189, 94)
         Me.rbttnB.Name = "rbttnB"
         Me.rbttnB.Size = New System.Drawing.Size(90, 17)
         Me.rbttnB.TabIndex = 1
@@ -195,7 +213,7 @@ Partial Class QuienQuiereSerMillonarioMain
         'rbttnA
         '
         Me.rbttnA.AutoSize = True
-        Me.rbttnA.Location = New System.Drawing.Point(13, 63)
+        Me.rbttnA.Location = New System.Drawing.Point(16, 94)
         Me.rbttnA.Name = "rbttnA"
         Me.rbttnA.Size = New System.Drawing.Size(90, 17)
         Me.rbttnA.TabIndex = 0
@@ -256,33 +274,14 @@ Partial Class QuienQuiereSerMillonarioMain
         Me.GroupBox2.TabIndex = 7
         Me.GroupBox2.TabStop = False
         '
-        'PictureBox1
+        'LabelTime
         '
-        Me.PictureBox1.Image = Global.QuienQuiereSerMillonario.My.Resources.Resources.images1
-        Me.PictureBox1.InitialImage = Nothing
-        Me.PictureBox1.Location = New System.Drawing.Point(104, 19)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(182, 179)
-        Me.PictureBox1.TabIndex = 7
-        Me.PictureBox1.TabStop = False
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(230, 26)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(91, 13)
-        Me.Label1.TabIndex = 10
-        Me.Label1.Text = "Tiempo Restante:"
-        '
-        'LabelTimer
-        '
-        Me.LabelTimer.AutoSize = True
-        Me.LabelTimer.Location = New System.Drawing.Point(327, 26)
-        Me.LabelTimer.Name = "LabelTimer"
-        Me.LabelTimer.Size = New System.Drawing.Size(68, 13)
-        Me.LabelTimer.TabIndex = 11
-        Me.LabelTimer.Text = "30 segundos"
+        Me.LabelTime.AutoSize = True
+        Me.LabelTime.Location = New System.Drawing.Point(342, 18)
+        Me.LabelTime.Name = "LabelTime"
+        Me.LabelTime.Size = New System.Drawing.Size(30, 13)
+        Me.LabelTime.TabIndex = 9
+        Me.LabelTime.Text = "Hora"
         '
         'LabelDate
         '
@@ -293,20 +292,21 @@ Partial Class QuienQuiereSerMillonarioMain
         Me.LabelDate.TabIndex = 8
         Me.LabelDate.Text = "Fecha"
         '
-        'LabelTime
+        'PictureBox1
         '
-        Me.LabelTime.AutoSize = True
-        Me.LabelTime.Location = New System.Drawing.Point(342, 18)
-        Me.LabelTime.Name = "LabelTime"
-        Me.LabelTime.Size = New System.Drawing.Size(30, 13)
-        Me.LabelTime.TabIndex = 9
-        Me.LabelTime.Text = "Hora"
+        Me.PictureBox1.Image = Global.QuienQuiereSerMillonario.My.Resources.Resources.images1
+        Me.PictureBox1.InitialImage = Nothing
+        Me.PictureBox1.Location = New System.Drawing.Point(104, 19)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(182, 179)
+        Me.PictureBox1.TabIndex = 7
+        Me.PictureBox1.TabStop = False
         '
         'QuienQuiereSerMillonarioMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(487, 457)
+        Me.ClientSize = New System.Drawing.Size(487, 525)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Timer)
         Me.Controls.Add(Me.GroupBox1)
