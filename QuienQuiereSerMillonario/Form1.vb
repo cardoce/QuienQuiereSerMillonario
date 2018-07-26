@@ -32,6 +32,8 @@
                            Windows.Forms.DialogResult.OK Then
             procesarRespuesta(respuesta)
         End If
+        timeLeft = 31
+        correrTimer()
     End Sub
 
     Function esRespuestaCorrecta(ByVal respuestaUsuario As String, ByVal indicePregunta As Integer) As Boolean
