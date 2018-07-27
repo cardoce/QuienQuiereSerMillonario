@@ -143,6 +143,7 @@ Partial Class QuienQuiereSerMillonarioMain
         '
         'txtPorA
         '
+        Me.txtPorA.BackColor = System.Drawing.SystemColors.Control
         Me.txtPorA.Location = New System.Drawing.Point(113, 94)
         Me.txtPorA.Name = "txtPorA"
         Me.txtPorA.ReadOnly = True
