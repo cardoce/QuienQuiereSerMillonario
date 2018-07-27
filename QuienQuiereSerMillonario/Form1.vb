@@ -40,7 +40,7 @@
     Dim Premios() As Integer = {100000, 250000, 500000, 750000, 1000000,
         2000000, 2500000, 3000000, 5000000, 7500000, 10000000, 12000000,
         15000000, 20000000, 25000000}
-    Dim numeroDePreguntas As Integer = 9
+    Dim numeroDePreguntas As Integer = 15
     Dim numeroDeTurno As Integer = 0
     Dim puntosDeJugador As Integer = 0
     Dim indicePregunta As Integer = 0
@@ -60,6 +60,7 @@
     End Sub
 
     Function esRespuestaCorrecta(ByVal respuestaUsuario As String, ByVal indicePregunta As Integer) As Boolean
+        Dim test As String = RespuestasCorrectas(indicePregunta)
         If respuestaUsuario.Equals(RespuestasCorrectas(indicePregunta)) Then
             Return True
         Else
@@ -182,11 +183,12 @@
     End Sub
 
     Function obtenerRespuestaCorrecta(ByVal index As Integer)
-        index = index * 4
         Dim respuesta As String = ""
-        For value As Integer = 0 To 4
-            If esRespuestaCorrecta(Respuestas(index), index) Then
-                respuesta = Respuestas(index)
+        Dim indexTemporal As Integer = index * 4
+        For value As Integer = indexTemporal To (indexTemporal + 4)
+            Dim test As String = Respuestas(value)
+            If esRespuestaCorrecta(Respuestas(value), index) Then
+                respuesta = Respuestas(value)
             End If
         Next
         Return respuesta
