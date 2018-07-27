@@ -36,14 +36,14 @@
 
 
     Dim PreguntasUsadas() As Boolean = {False, False, False, False,
-        False, False, False, False, False, False, False}
+        False, False, False, False, False, False, False, False, False, False, False}
     Dim Premios() As Integer = {100000, 250000, 500000, 750000, 1000000,
         2000000, 2500000, 3000000, 5000000, 7500000, 10000000, 12000000,
         15000000, 20000000, 25000000}
-    Dim numeroDePreguntas As Integer = 15
+    Dim numeroDePreguntas As Integer = 14
     Dim numeroDeTurno As Integer = 0
     Dim puntosDeJugador As Integer = 0
-    Dim indicePregunta As Integer = 0
+    Dim indicePregunta As Integer = obtenerIndiceDePregunta()
     Dim banderaJuegoContinua As Boolean = True
     Dim timeLeft As Integer = 30
 
@@ -71,7 +71,7 @@
         If numeroDeTurno < numeroDePreguntas And banderaJuegoContinua Then
             If esRespuestaCorrecta(respuesta, indicePregunta) Then
                 puntosDeJugador = Premios(indicePregunta)
-                indicePregunta = indicePregunta + 1
+                indicePregunta = obtenerIndiceDePregunta()
                 txtPuntos.Text = puntosDeJugador
                 asignarPreguntasyRepuestas(indicePregunta)
                 preguntaUsada(indicePregunta)
@@ -108,14 +108,15 @@
         Return respuesta
     End Function
 
-    'Function numeroDePregunta() As Integer
-    'Dim numero As Integer
-    'numero = CInt(Math.Ceiling(Rnd() * (numeroDePreguntas - 1)))
-    'Do While (PreguntasUsadas(numero))
-    '       numero = CInt(Math.Ceiling(Rnd() * (numeroDePreguntas - 1)))
-    'Loop
-    'Return numero
-    'End Function
+    Function obtenerIndiceDePregunta() As Integer
+        Dim numero As Integer
+        Dim random As New Random
+        numero = random.Next(0, numeroDePreguntas)
+        Do While (PreguntasUsadas(numero))
+            numero = random.Next(0, numeroDePreguntas)
+        Loop
+        Return numero
+    End Function
 
     Sub preguntaUsada(ByVal index As Integer)
         PreguntasUsadas(index) = True
