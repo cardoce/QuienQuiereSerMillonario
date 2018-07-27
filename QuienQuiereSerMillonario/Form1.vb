@@ -245,6 +245,7 @@
     Sub calcularPorcentajes()
         Dim range As New Random
         Dim porA, porB, porC, porD As Integer
+        Dim values(4) As Integer
         Dim max As Integer = 100
         porA = range.Next(0, max)
         max -= porA
@@ -253,11 +254,27 @@
         porC = range.Next(0, max)
         max -= porC
         porD = max
+        values(0) = porA
+        values(1) = porB
+        values(2) = porC
+        values(3) = porD
 
+        Dim mayorPor As Integer = values.Max
+
+        If porA = mayorPor Then
+            txtPorA.BackColor = Color.LightGreen
+        ElseIf porB = mayorPor Then
+            txtPorB.BackColor = Color.LightGreen
+        ElseIf porC = mayorPor Then
+            txtPorC.BackColor = Color.LightGreen
+        ElseIf porD = mayorPor Then
+            txtPorD.BackColor = Color.LightGreen
+        End If
         txtPorA.Text = porA
         txtPorB.Text = porB
         txtPorC.Text = porC
         txtPorD.Text = porD
+
 
         txtPorA.Show()
         txtPorB.Show()
