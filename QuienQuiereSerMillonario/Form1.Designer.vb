@@ -312,6 +312,7 @@ Partial Class QuienQuiereSerMillonarioMain
         Me.Controls.Add(Me.Timer)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "QuienQuiereSerMillonarioMain"
+        Me.ShowIcon = False
         Me.Text = "Quien Quiere Ser Millonario?"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
