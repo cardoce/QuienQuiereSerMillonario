@@ -292,4 +292,7 @@
         LabelTime.Text = DateTime.Now.ToShortTimeString()
     End Sub
 
+    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
+        Form2.ShowDialog()
+    End Sub
 End Class
